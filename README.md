@@ -3,7 +3,7 @@ This repository aims to provide sample code for the SmarterMail REST API (availa
 
 The following code samples are available:
 * C# (.NET Core 3.1) --> read the [separate README](./C%23/SmarterMailCodeSamples/README.md)
-    - [Authentication](./C%23/SmarterMailCodeSamples/SmarterMailCodeSamples/Controllers/AuthenticationControllers)
+    - [Authentication](./C%23/SmarterMailCodeSamples/SmarterMailCodeSamples/Controllers/AuthenticationController.cs)
 
 ## Contributing
 If you want to contribute to this repository, feel free to create a new issue and/or contribute code yourself. If you want to contribute code, please:
