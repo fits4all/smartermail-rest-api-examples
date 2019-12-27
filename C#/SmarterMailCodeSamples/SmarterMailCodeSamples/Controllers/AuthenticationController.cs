@@ -34,6 +34,23 @@ namespace SmarterMailCodeSamples.Controllers
             
             AuthenticationOutput result = await _auth.AuthenticateUser(data);
 
+            // You can now access all data like the access token with result.KEY_NAME (e.g. result.accessToken)
+
+            return result;
+        }
+
+        [HttpGet("refresh")]
+        public async Task<RefreshTokenOutput> RefreshToken()
+        {
+            var data = new RefreshTokenInput
+            {
+                token = "ey......" // enter your refresh token here
+            };
+
+            RefreshTokenOutput result = await _auth.RefreshToken(data);
+
+            // You can now access all data like the access token with result.KEY_NAME (e.g. result.accessToken)
+
             return result;
         }
     }
