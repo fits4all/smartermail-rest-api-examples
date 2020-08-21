@@ -6,6 +6,6 @@ When ran a form will open (cli version planned). This form will convert the pass
 
 For the url, just put the bare url (no http or https). This value is also used to name the file.
 
-# SMApiExamples.ps1
+## SMApiExamples.ps1
 
 This is a collection of SM Api Calls. If there is a specific call needing demonstration, let me know.
