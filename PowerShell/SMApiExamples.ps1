@@ -10,7 +10,7 @@ foreach ($server in $maillist) {
 
     $pwdTxt = Get-Content "C:\temp\$mailserver.txt"
     $securePwd = $pwdTxt | ConvertTo-SecureString
-    $credObject = New-Object System.Management.Automation.PSCredential -ArgumentList ("admin", $securePwd)
+    $credObject = New-Object System.Management.Automation.PSCredential -ArgumentList ($username, $securePwd)
     $password = $credObject.GetNetworkCredential().Password
     $username = $credObject.GetNetworkCredential().UserName
     
@@ -21,7 +21,7 @@ foreach ($server in $maillist) {
 
     $authBody = "{ `n	`"username`": `"$username`",`n	`"password`": `"$password`" `n}"
 
-    $response = Invoke-RestMethod "http://$mailserver/api/v1/auth/authenticate-user" Method 'POST' -Headers $authHeaders -Body $authBody
+    $response = Invoke-RestMethod "http://$mailserver/api/v1/auth/authenticate-user" -Method 'POST' -Headers $authHeaders -Body $authBody
 
     # SM Access Token
 
